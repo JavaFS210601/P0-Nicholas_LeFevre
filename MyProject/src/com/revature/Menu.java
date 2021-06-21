@@ -54,7 +54,17 @@ public class Menu {
 				break;
 			}
 			case 2:{
-				
+				System.out.println("Thank you for choosing to sign up at my gym!");
+				System.out.println("Please follow the steps to get a successful sign up!");
+				System.out.println("Please Enter your first and last name: ");
+				String nameInput = scan.nextLine();
+				System.out.println("Please Enter your address: ");
+				int addressInput = scan.nextInt();
+				scan.nextLine();
+				System.out.println("Please Enter the city you live in: ");
+				String cityInput = scan.nextLine();
+				System.out.println("Please Enter the state you live in (Ex.Pennsylvania --> pa): ");
+				String stateInput = scan.nextLine().toUpperCase();
 				break;
 			}
 			
