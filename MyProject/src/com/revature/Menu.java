@@ -45,6 +45,8 @@ public class Menu {
 			switch(input) {
 			
 			case 1: {
+				
+				//Gives a quick detailed summary of the gym
 				System.out.println("Welcome to Nicks gym!");
 				System.out.println("I created this gym in 2020 when the pandemic started.");
 				System.out.println("This gym is for people who have sat inside for the last year and need a little pick me up!");
@@ -56,16 +58,47 @@ public class Menu {
 			case 2:{
 				System.out.println("Thank you for choosing to sign up at my gym!");
 				System.out.println("Please follow the steps to get a successful sign up!");
+				
+				//user input for first and last name
 				System.out.println("Please Enter your first and last name: ");
-				String nameInput = scan.nextLine();
+				String name = scan.nextLine().toUpperCase();
+				
+				//user input for address
 				System.out.println("Please Enter your address: ");
-				int addressInput = scan.nextInt();
-				scan.nextLine();
+				int address = scan.nextInt();
+				scan.nextLine().toUpperCase();
+				
+				//user input for the city 
 				System.out.println("Please Enter the city you live in: ");
-				String cityInput = scan.nextLine();
+				String city = scan.nextLine().toUpperCase();
+				
+				//user input for state
 				System.out.println("Please Enter the state you live in (Ex.Pennsylvania --> pa): ");
-				String stateInput = scan.nextLine().toUpperCase();
+				String state = scan.nextLine().toUpperCase();
+				
+				
+				System.out.println("Please Enter your 5 digit zip code: ");
+				int zip = scan.nextInt();
+				scan.nextLine();
 				break;
+			}
+			case 3:{
+				System.out.println("Please enter your username: ");
+				break;
+			}
+			case 4:{
+				System.out.println("~~~~~~~~~~~~~~~~~~~~~~");
+				System.out.println("      Gym Prices      ");
+				System.out.println("~~~~~~~~~~~~~~~~~~~~~~");
+				System.out.println("Daily:   $14.99");
+				System.out.println("Monthly: $9.99");
+				System.out.println("Yearly:  $89.99");
+				break;
+			}
+			case 5: {
+				System.out.println("Have a great day!");
+				System.out.println("Please come back to visit soon :)");
+				displayMenu = false;
 			}
 			
 			}
