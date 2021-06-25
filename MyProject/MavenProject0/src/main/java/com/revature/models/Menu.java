@@ -2,9 +2,11 @@ package com.revature.models;
 
 import java.util.Scanner;
 
+import com.revature.daos.MemberDao;
+
 public class Menu {
 	
-	GymLogin gym = new GymLogin();
+	MemberDao md = new MemberDao();
 	
 	public void display() {
 		
@@ -30,10 +32,11 @@ public class Menu {
 			
 			
 			//Options for the user to choose
-			//System.out.println("0. Apply for a position?"); If I have time I will add this feature.
+			//If I have time, I want to add an apply method for people to apply for positions
+			//Also, I want to have the member sign in when they get to the gym
 			System.out.println("1. Greetings/Information about my gym!");
 			System.out.println("2. Sign up as a new member");
-			System.out.println("3. Sign in");
+			System.out.println("3. Cancel your membership");
 			System.out.println("4. Check the cost of a membership");
 			System.out.println("5. Exit the menu");
 			
@@ -44,9 +47,9 @@ public class Menu {
 			//switch statement to go through the menu options and be able to sign up for or sign in to the gym.
 			switch(input) {
 			
+			
+			//Gives a quick detailed summary of the gym
 			case 1: {
-				
-				//Gives a quick detailed summary of the gym
 				System.out.println("Welcome to Nicks gym!");
 				System.out.println("I created this gym in 2020 when the pandemic started.");
 				System.out.println("This gym is for people who have sat inside for the last year and need a little pick me up!");
@@ -55,13 +58,15 @@ public class Menu {
 				System.out.println("So don't get sick, come visit Nick! ");
 				break;
 			}
+			
+			//Sign up as a new member
 			case 2:{
 				System.out.println("Thank you for choosing to sign up at my gym!");
 				System.out.println("Please follow the steps to get a successful sign up!");
 				
 				//user input for first and last name
-				System.out.println("Please Enter your first and last name: ");
-				String name = scan.nextLine().toUpperCase();
+				System.out.println("Please Enter your first name: ");
+				String name = scan.nextLine();
 				
 				//user input for address
 				System.out.println("Please Enter your address: ");
@@ -82,31 +87,40 @@ public class Menu {
 				scan.nextLine();
 				break;
 			}
+			
+			//Cancel your membership
 			case 3:{
-				System.out.println("Please enter your username: ");
+				
 				break;
 			}
+			
+			//Check membership prices
 			case 4:{
-				System.out.println("~~~~~~~~~~~~~~~~~~~~~~");
-				System.out.println("      Gym Prices      ");
-				System.out.println("~~~~~~~~~~~~~~~~~~~~~~");
-				System.out.println("Daily:   $14.99");
-				System.out.println("Monthly: $9.99");
-				System.out.println("Yearly:  $89.99");
+				System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+				System.out.println("*      Gym Memberships    *");
+				System.out.println("*        (per month)      *");
+				System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+				System.out.println("Elite:    $39.99 --> includes Gold Membership + free protein shake every time you come!");
+				System.out.println("Gold:     $29.99 --> includes Premium Membership + bring unlimited guests");
+				System.out.println("Premium:  $19.99 --> includes Standard Membership + tanning and massages");
+				System.out.println("Standard: $9.99  --> includes full gym access");
 				break;
 			}
+			
+			//Exit the program
 			case 5: {
 				System.out.println("Have a great day!");
 				System.out.println("Please come back to visit soon :)");
 				displayMenu = false;
+				break;
+				}
+			
+			//Default case to check if the user inputs something that doesn't exist
+			default: {
+				System.out.println("I'm sorry, that function doesn't exist, please try again!");
+				break;
 			}
-			
-			}
-			
-			
+			}	
 		}
 	}
-
-
-
 }
