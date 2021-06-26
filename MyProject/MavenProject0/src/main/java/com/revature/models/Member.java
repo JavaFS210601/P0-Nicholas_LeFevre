@@ -7,9 +7,9 @@ public class Member {
 	private String l_name;
 	private String address;
 	private String city;
-	private char state;
-	private char zip;
-	private char phone_number;
+	private String state;
+	private String zip;
+	private String phone_number;
 	private int membership_id;
 	
 	
@@ -24,8 +24,8 @@ public class Member {
 
 
 	//args constructor
-	public Member(int member_id, String f_name, String l_name, String address, String city, char state, char zip,
-			char phone_number, int membership_id) {
+	public Member(int member_id, String f_name, String l_name, String address, String city, String state, String zip,
+			String phone_number, int membership_id) {
 		super();
 		this.member_id = member_id;
 		this.f_name = f_name;
@@ -40,7 +40,7 @@ public class Member {
 
 
 	//args constructor without member_id so we can add new members to the gym!
-	public Member(String f_name, String l_name, String address, String city, char state, char zip, char phone_number,
+	public Member(String f_name, String l_name, String address, String city, String state, String zip, String phone_number,
 			int membership_id) {
 		super();
 		this.f_name = f_name;
@@ -62,6 +62,8 @@ public class Member {
 	}
 
 
+
+
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -72,9 +74,9 @@ public class Member {
 		result = prime * result + ((l_name == null) ? 0 : l_name.hashCode());
 		result = prime * result + member_id;
 		result = prime * result + membership_id;
-		result = prime * result + phone_number;
-		result = prime * result + state;
-		result = prime * result + zip;
+		result = prime * result + ((phone_number == null) ? 0 : phone_number.hashCode());
+		result = prime * result + ((state == null) ? 0 : state.hashCode());
+		result = prime * result + ((zip == null) ? 0 : zip.hashCode());
 		return result;
 	}
 
@@ -112,11 +114,20 @@ public class Member {
 			return false;
 		if (membership_id != other.membership_id)
 			return false;
-		if (phone_number != other.phone_number)
+		if (phone_number == null) {
+			if (other.phone_number != null)
+				return false;
+		} else if (!phone_number.equals(other.phone_number))
 			return false;
-		if (state != other.state)
+		if (state == null) {
+			if (other.state != null)
+				return false;
+		} else if (!state.equals(other.state))
 			return false;
-		if (zip != other.zip)
+		if (zip == null) {
+			if (other.zip != null)
+				return false;
+		} else if (!zip.equals(other.zip))
 			return false;
 		return true;
 	}
@@ -172,32 +183,32 @@ public class Member {
 	}
 
 
-	public char getState() {
+	public String getState() {
 		return state;
 	}
 
 
-	public void setState(char state) {
+	public void setState(String state) {
 		this.state = state;
 	}
 
 
-	public char getZip() {
+	public String getZip() {
 		return zip;
 	}
 
 
-	public void setZip(char zip) {
+	public void setZip(String zip) {
 		this.zip = zip;
 	}
 
 
-	public char getPhone_number() {
+	public String getPhone_number() {
 		return phone_number;
 	}
 
 
-	public void setPhone_number(char phone_number) {
+	public void setPhone_number(String phone_number) {
 		this.phone_number = phone_number;
 	}
 

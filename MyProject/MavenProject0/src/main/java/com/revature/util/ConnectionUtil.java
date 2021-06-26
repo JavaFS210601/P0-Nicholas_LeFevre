@@ -20,7 +20,7 @@ public static Connection getConnection() throws SQLException {
 		
 		//We need to provide our databaase credentials
 		//We'll hardcode them for now, but we'll see how to hide this username/password in environment variables
-		String url = "jdbc:postgresql://localhost:5432/postgres?currentSchema=Gym";
+		String url = "jdbc:postgresql://localhost:5432/postgres?currentSchema=\"Project0\"";
 		String username = "postgres";
 		String password = "Warminster11"; //this will be whatever password you set in postgres
 		
