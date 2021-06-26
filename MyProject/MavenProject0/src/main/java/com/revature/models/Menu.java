@@ -119,7 +119,7 @@ public class Menu {
 			default: {
 				System.out.println("I'm sorry, that function doesn't exist, please try again!");
 				break;
-			}
+				}
 			}	
 		}
 	}

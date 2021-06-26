@@ -1,0 +1,222 @@
+package com.revature.models;
+
+public class Member {
+		
+	private int member_id;
+	private String f_name;
+	private String l_name;
+	private String address;
+	private String city;
+	private char state;
+	private char zip;
+	private char phone_number;
+	private int membership_id;
+	
+	
+	
+	//boiler plate code
+	
+	//no args constructor
+	public Member() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+
+	//args constructor
+	public Member(int member_id, String f_name, String l_name, String address, String city, char state, char zip,
+			char phone_number, int membership_id) {
+		super();
+		this.member_id = member_id;
+		this.f_name = f_name;
+		this.l_name = l_name;
+		this.address = address;
+		this.city = city;
+		this.state = state;
+		this.zip = zip;
+		this.phone_number = phone_number;
+		this.membership_id = membership_id;
+	}
+
+
+	//args constructor without member_id so we can add new members to the gym!
+	public Member(String f_name, String l_name, String address, String city, char state, char zip, char phone_number,
+			int membership_id) {
+		super();
+		this.f_name = f_name;
+		this.l_name = l_name;
+		this.address = address;
+		this.city = city;
+		this.state = state;
+		this.zip = zip;
+		this.phone_number = phone_number;
+		this.membership_id = membership_id;
+	}
+
+
+	@Override
+	public String toString() {
+		return "Member [member_id=" + member_id + ", f_name=" + f_name + ", l_name=" + l_name + ", address=" + address
+				+ ", city=" + city + ", state=" + state + ", zip=" + zip + ", phone_number=" + phone_number
+				+ ", membership_id=" + membership_id + "]";
+	}
+
+
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((address == null) ? 0 : address.hashCode());
+		result = prime * result + ((city == null) ? 0 : city.hashCode());
+		result = prime * result + ((f_name == null) ? 0 : f_name.hashCode());
+		result = prime * result + ((l_name == null) ? 0 : l_name.hashCode());
+		result = prime * result + member_id;
+		result = prime * result + membership_id;
+		result = prime * result + phone_number;
+		result = prime * result + state;
+		result = prime * result + zip;
+		return result;
+	}
+
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Member other = (Member) obj;
+		if (address == null) {
+			if (other.address != null)
+				return false;
+		} else if (!address.equals(other.address))
+			return false;
+		if (city == null) {
+			if (other.city != null)
+				return false;
+		} else if (!city.equals(other.city))
+			return false;
+		if (f_name == null) {
+			if (other.f_name != null)
+				return false;
+		} else if (!f_name.equals(other.f_name))
+			return false;
+		if (l_name == null) {
+			if (other.l_name != null)
+				return false;
+		} else if (!l_name.equals(other.l_name))
+			return false;
+		if (member_id != other.member_id)
+			return false;
+		if (membership_id != other.membership_id)
+			return false;
+		if (phone_number != other.phone_number)
+			return false;
+		if (state != other.state)
+			return false;
+		if (zip != other.zip)
+			return false;
+		return true;
+	}
+
+
+	public int getMember_id() {
+		return member_id;
+	}
+
+
+//	public void setMember_id(int member_id) {
+//		this.member_id = member_id;
+//	}
+
+
+	public String getF_name() {
+		return f_name;
+	}
+
+
+	public void setF_name(String f_name) {
+		this.f_name = f_name;
+	}
+
+
+	public String getL_name() {
+		return l_name;
+	}
+
+
+	public void setL_name(String l_name) {
+		this.l_name = l_name;
+	}
+
+
+	public String getAddress() {
+		return address;
+	}
+
+
+	public void setAddress(String address) {
+		this.address = address;
+	}
+
+
+	public String getCity() {
+		return city;
+	}
+
+
+	public void setCity(String city) {
+		this.city = city;
+	}
+
+
+	public char getState() {
+		return state;
+	}
+
+
+	public void setState(char state) {
+		this.state = state;
+	}
+
+
+	public char getZip() {
+		return zip;
+	}
+
+
+	public void setZip(char zip) {
+		this.zip = zip;
+	}
+
+
+	public char getPhone_number() {
+		return phone_number;
+	}
+
+
+	public void setPhone_number(char phone_number) {
+		this.phone_number = phone_number;
+	}
+
+
+	public int getMembership_id() {
+		return membership_id;
+	}
+
+
+	public void setMembership_id(int membership_id) {
+		this.membership_id = membership_id;
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+}
