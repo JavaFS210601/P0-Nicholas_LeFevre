@@ -11,5 +11,7 @@ public interface MemberDaoInterface {
 	
 	public void addMember(Member mem);
 	
+	public void cancelMember(int mem);
+	
 
 }

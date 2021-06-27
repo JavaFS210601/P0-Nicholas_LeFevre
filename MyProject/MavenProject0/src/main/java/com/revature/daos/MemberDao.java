@@ -84,5 +84,28 @@ public class MemberDao implements MemberDaoInterface{
 	}
 
 
+	@Override
+	public void cancelMember(int mem) {
+		try(Connection conn = ConnectionUtil.getConnection()){
+			
+			String sql = "DELETE FROM members WHERE member_id = ?;";
+			
+			PreparedStatement ps = conn.prepareStatement(sql);
+			
+			ps.setInt(1, mem);
+			
+			ps.executeUpdate();
+			
+			System.out.println("Good luck getting the gains somewhere else...");
+			
+			
+		}catch(SQLException e) {
+			System.out.println("Failed to canel membership");
+			e.printStackTrace();
+		}
+		
+	}
+
+
 
 }

@@ -107,7 +107,21 @@ public class Menu {
 			
 			//Cancel your membership
 			case 4:{
+				System.out.println("The members currently at my gym are... ");
 				
+				List<Member> members = md.getMembers();
+				
+				for(Member m : members) {
+					System.out.println(m);
+				}
+				
+				System.out.println("Enter your member id to cancel your membership: ");
+				
+				int membership_input = scan.nextInt();
+				scan.nextLine();
+				
+				md.cancelMember(membership_input);
+				break;
 			}
 			
 			//Show gym membership tiers and pries
