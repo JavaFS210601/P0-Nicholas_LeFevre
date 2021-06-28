@@ -157,14 +157,14 @@ public class Menu {
 				}
 				
 				System.out.println("Enter your Id for changing your role: ");
-				int memId = scan.nextInt();
+				int member_id = scan.nextInt();
 				scan.nextLine();
 				
 				System.out.println("Enter your new membership tier 1)Elite 2)Gold 3)Premium 4)Standard: ");
-				int tierId = scan.nextInt();
+				int membership_id = scan.nextInt();
 				scan.nextLine();
 				
-				md.changeMembership(memId, tierId);
+				md.changeMembership(member_id, membership_id);
 				
 				break;
 			}

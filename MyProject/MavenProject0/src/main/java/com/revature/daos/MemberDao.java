@@ -100,7 +100,7 @@ public class MemberDao implements MemberDaoInterface{
 			
 			
 		}catch(SQLException e) {
-			System.out.println("Failed to canel membership");
+			System.out.println("Failed to cancel membership");
 			e.printStackTrace();
 		}
 		
@@ -108,15 +108,15 @@ public class MemberDao implements MemberDaoInterface{
 
 
 	@Override
-	public void changeMembership(int memId, int tierId) {
+	public void changeMembership(int member_id, int membership_id) {
 		try(Connection conn = ConnectionUtil.getConnection()){
 			
-			String sql = "UPDATE members SET membership_tier = ? WHERE member_id = ?;";
+			String sql = "UPDATE members SET membership_id = ? WHERE member_id = ?;";
 			
 			PreparedStatement ps = conn.prepareStatement(sql);
 			
-			ps.setInt(1, memId);
-			ps.setInt(2, tierId);
+			ps.setInt(1, membership_id);
+			ps.setInt(2, member_id);
 			
 			ps.executeUpdate();
 			

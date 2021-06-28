@@ -2,3 +2,11 @@
 2021-06-28 11:32:24 INFO  Menu:71 - User selected to get see all the members.
 2021-06-28 11:32:26 INFO  Menu:71 - User selected to get see all the members.
 2021-06-28 11:32:28 INFO  Menu:71 - User selected to get see all the members.
+2021-06-28 14:11:16 INFO  Menu:72 - User selected to get see all the members.
+2021-06-28 14:18:02 INFO  Menu:72 - User selected to get see all the members.
+2021-06-28 14:18:40 INFO  Menu:72 - User selected to get see all the members.
+2021-06-28 14:19:21 INFO  Menu:72 - User selected to get see all the members.
+2021-06-28 14:21:32 INFO  Menu:84 - User selected to sign up as a new member.
+2021-06-28 14:22:05 INFO  Menu:72 - User selected to get see all the members.
+2021-06-28 14:22:15 INFO  Menu:118 - User selected to cancel their membership...nerds
+2021-06-28 14:22:35 INFO  Menu:72 - User selected to get see all the members.
