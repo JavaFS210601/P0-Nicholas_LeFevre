@@ -3,6 +3,9 @@ package com.revature.models;
 import java.util.List;
 import java.util.Scanner;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import com.revature.daos.MemberDao;
 
 public class Menu {
@@ -14,6 +17,8 @@ public class Menu {
 		boolean displayMenu = true;
 		
 		Scanner scan = new Scanner(System.in);
+		
+		final Logger log = LogManager.getLogger(Menu.class);
 		
 		//printing the welcome home screen
 		System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~");
@@ -63,6 +68,7 @@ public class Menu {
 			
 			//Show all members at the gym
 			case 2:{
+				log.info("User selected to get see all the members.");
 				System.out.println("Getting all the swol people...");
 				
 				List<Member> members = md.getMembers();
@@ -74,6 +80,7 @@ public class Menu {
 			
 			//Sign up for a new gym membership
 			case 3:{
+				log.info("User selected to sign up as a new member.");
 				System.out.println("Please enter your fisrt name: ");
 				String f_name = scan.nextLine();
 				
@@ -107,6 +114,7 @@ public class Menu {
 			
 			//Cancel your membership
 			case 4:{
+				log.info("User selected to cancel their membership...nerds");
 				System.out.println("The members currently at my gym are... ");
 				
 				List<Member> members = md.getMembers();

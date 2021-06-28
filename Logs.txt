@@ -1,0 +1,6 @@
+2021-06-28 11:23:47 INFO  Menu:71 - User selected to get see all the members.
+2021-06-28 11:23:56 INFO  Menu:71 - User selected to get see all the members.
+2021-06-28 11:24:46 INFO  Menu:71 - User selected to get see all the members.
+2021-06-28 11:25:00 INFO  Menu:83 - User selected to sign up as a new member.
+2021-06-28 11:25:36 INFO  Menu:71 - User selected to get see all the members.
+2021-06-28 11:28:24 INFO  Menu:71 - User selected to get see all the members.
