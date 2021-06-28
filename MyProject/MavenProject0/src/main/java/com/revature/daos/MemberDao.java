@@ -85,14 +85,14 @@ public class MemberDao implements MemberDaoInterface{
 
 
 	@Override
-	public void cancelMember(int mem) {
+	public void cancelMember(int memId) {
 		try(Connection conn = ConnectionUtil.getConnection()){
 			
 			String sql = "DELETE FROM members WHERE member_id = ?;";
 			
 			PreparedStatement ps = conn.prepareStatement(sql);
 			
-			ps.setInt(1, mem);
+			ps.setInt(1, memId);
 			
 			ps.executeUpdate();
 			
@@ -101,6 +101,29 @@ public class MemberDao implements MemberDaoInterface{
 			
 		}catch(SQLException e) {
 			System.out.println("Failed to canel membership");
+			e.printStackTrace();
+		}
+		
+	}
+
+
+	@Override
+	public void changeMembership(int memId, int tierId) {
+		try(Connection conn = ConnectionUtil.getConnection()){
+			
+			String sql = "UPDATE members SET membership_tier = ? WHERE member_id = ?;";
+			
+			PreparedStatement ps = conn.prepareStatement(sql);
+			
+			ps.setInt(1, memId);
+			ps.setInt(2, tierId);
+			
+			ps.executeUpdate();
+			
+			System.out.println("Membership has been updated!");
+			
+		}catch(SQLException e) {
+			System.out.println("Failed to switch memberships");
 			e.printStackTrace();
 		}
 		

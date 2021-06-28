@@ -45,7 +45,8 @@ public class Menu {
 			System.out.println("3. Sign up as a new member");
 			System.out.println("4. Cancel your membership");
 			System.out.println("5. Check the cost of a membership");
-			System.out.println("6. Exit the menu");
+			System.out.println("6. Change membership");
+			System.out.println("7. Exit the menu");
 			
 			//integer input since the menu options are numbered and the scan.nextLine() because i'm using an int and not a string.
 			int input = scan.nextInt();
@@ -145,8 +146,31 @@ public class Menu {
 				break;
 				}
 			
-			//Exit the program
+			//Change your membership tier
 			case 6: {
+				System.out.println("The members currently at the gym...");
+				
+				List<Member> members = md.getMembers();
+				
+				for(Member e : members) {
+					System.out.println(e);
+				}
+				
+				System.out.println("Enter your Id for changing your role: ");
+				int memId = scan.nextInt();
+				scan.nextLine();
+				
+				System.out.println("Enter your new membership tier 1)Elite 2)Gold 3)Premium 4)Standard: ");
+				int tierId = scan.nextInt();
+				scan.nextLine();
+				
+				md.changeMembership(memId, tierId);
+				
+				break;
+			}
+			
+			//Exit the program
+			case 7: {
 				System.out.println("Have a great day!");
 				System.out.println("Please come back to visit soon :)");
 				displayMenu = false;
