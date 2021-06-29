@@ -56,9 +56,9 @@ public class Member {
 
 	@Override
 	public String toString() {
-		return "Member [member_id=" + member_id + ", f_name=" + f_name + ", l_name=" + l_name + ", address=" + address
-				+ ", city=" + city + ", state=" + state + ", zip=" + zip + ", phone_number=" + phone_number
-				+ ", membership_id=" + membership_id + "]";
+		return "Member Id: " + member_id + ", First Name: " + f_name + ", Last Name: " + l_name + ", Address: " + address
+				+ ", City: " + city + ", State: " + state + ", Zipcode: " + zip + ", Phone Number: " + phone_number
+				+ ", Membership Id: " + membership_id + "]";
 	}
 
 
